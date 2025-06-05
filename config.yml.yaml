@@ -1,0 +1,13 @@
+title: Blog de Teatro
+description: Um espaço dedicado às artes cênicas
+baseurl: ""
+url: "https://seu-usuario.github.io"
+theme: minima
+
+# Ativar processamento de dados
+plugins:
+  - jekyll-data
+
+# Personalização
+author:
+  name: Seu Nome
