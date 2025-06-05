@@ -1,0 +1,35 @@
+---
+layout: default
+title: Todas as Peças
+---
+
+<h1>Catálogo de Peças Teatrais</h1>
+
+<div class="filtros">
+  <label for="categoria">Filtrar por categoria:</label>
+  <select id="categoria">
+    <option value="todas">Todas</option>
+    <option value="Tragédia">Tragédia</option>
+    <option value="Comédia">Comédia</option>
+    <option value="Drama">Drama</option>
+  </select>
+</div>
+
+{% include lista_pecas.html %}
+
+<script>
+  // Filtro simples com JavaScript
+  document.getElementById('categoria').addEventListener('change', function() {
+    const categoria = this.value;
+    const pecas = document.querySelectorAll('.peca-item');
+    
+    pecas.forEach(peca => {
+      const pecaCategoria = peca.querySelector('p:first-child').textContent;
+      if (categoria === 'todas' || pecaCategoria.includes(categoria)) {
+        peca.style.display = 'block';
+      } else {
+        peca.style.display = 'none';
+      }
+    });
+  });
+</script>

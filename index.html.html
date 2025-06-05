@@ -1,0 +1,34 @@
+---
+layout: default
+title: Página Inicial
+---
+<header class="hero">
+  <h1>{{ site.title }}</h1>
+  <p>Explore o mundo mágico do teatro</p>
+</header>
+
+<section class="destaques">
+  <h2>Peças em Destaque</h2>
+  <div class="pecas-container">
+    {% for peca in site.data.pecas %}
+      <div class="peca-card">
+        <img src="/assets/images/{{ peca.imagem }}" alt="{{ peca.titulo }}">
+        <h3>{{ peca.titulo }}</h3>
+        <p>{{ peca.autor }} ({{ peca.ano }})</p>
+        <a href="/pecas/{{ peca.id }}.html" class="btn">Ver Detalhes</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ultimas-resenhas">
+  <h2>Últimas Resenhas</h2>
+  <ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

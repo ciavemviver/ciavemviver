@@ -1,0 +1,25 @@
+- id: hamlet
+  titulo: "Hamlet"
+  autor: "William Shakespeare"
+  ano: 1603
+  resumo: "A tragédia do príncipe dinamarquês em busca de vingança."
+  imagem: "hamlet.jpg"
+  categoria: "Tragédia"
+  duracao: "3 horas"
+  personagens:
+    - Hamlet
+    - Ofélia
+    - Rei Cláudio
+
+- id: o-avarento
+  titulo: "O Avarento"
+  autor: "Molière"
+  ano: 1668
+  resumo: "Sátira sobre a ganância humana."
+  imagem: "avarento.jpg"
+  categoria: "Comédia"
+  duracao: "2 horas"
+  personagens:
+    - Harpagon
+    - Cleante
+    - Valère

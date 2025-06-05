@@ -1,0 +1,10 @@
+<div class="lista-pecas">
+  {% for peca in site.data.pecas %}
+    <div class="peca-item">
+      <h3>{{ peca.titulo }}</h3>
+      <p><strong>Categoria:</strong> {{ peca.categoria }}</p>
+      <p>{{ peca.resumo }}</p>
+      <a href="/pecas/{{ peca.id }}.html">Leia mais</a>
+    </div>
+  {% endfor %}
+</div>
